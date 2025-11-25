@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { SuggestionsComponent } from './suggestions.component';
+import { ListSuggegestionsComponent } from './list-suggegestions/list-suggegestions.component';
+import { SuggestionDetailsComponent } from './suggestion-details/suggestion-details.component';
+
+const routes: Routes = [
+  //SuggestionsComponent est considéré racine de SuggestionsModuke
+  { path: '', component: SuggestionsComponent, children:[
+    //localhost:4200/suggestions
+      {path:'listsuggestions', component:ListSuggegestionsComponent},
+      //localhost:4200/suggestions/suggestion/1
+      {path:'suggestion/:id', component:SuggestionDetailsComponent}
+  ] }
+
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class SuggestionsRoutingModule { }

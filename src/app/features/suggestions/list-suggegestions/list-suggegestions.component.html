@@ -31,7 +31,7 @@
     'status-refused':s.status=='refusee',
     'status-pending':s.status=='en_attente'
     }" >
-    {{s.status}}
+    {{s.status | uppercase}}
   </span>
 
       <div  class="action-buttons">
@@ -42,6 +42,9 @@
           <button class="btn-favorite" *ngIf="s.status !=='refusee'" (click)="addToFavoris(s)">
             <span class="icon">❤️</span>
             Ajouter aux favoris
+          </button>
+          <button class="btn-favorite" [routerLink]="['/suggestions/suggestion',s.id]">
+           Details
           </button>
         </div>
       </div>

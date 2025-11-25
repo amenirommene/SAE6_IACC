@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { ListSuggegestionsComponent } from './core/list-suggegestions/list-suggegestions.component';
+import { ListSuggegestionsComponent } from './features/suggestions/list-suggegestions/list-suggegestions.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './core/home/home.component';
+import { NotfoundComponent } from './core/notfound/notfound.component';
 
 @NgModule({ //décorateur
   declarations: [ //les composants liés à ce module
-    AppComponent, HeaderComponent, FooterComponent, ListSuggegestionsComponent, HomeComponent
+    AppComponent, HeaderComponent, FooterComponent, HomeComponent, NotfoundComponent
   ],
   imports: [ //la liste des modules qu'on a besoin dans ce module
     BrowserModule,
