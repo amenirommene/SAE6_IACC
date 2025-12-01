@@ -12,7 +12,11 @@ import { NotfoundComponent } from './core/notfound/notfound.component';
 
 @NgModule({ //décorateur
   declarations: [ //les composants liés à ce module
-    AppComponent, HeaderComponent, FooterComponent, HomeComponent, NotfoundComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [ //la liste des modules qu'on a besoin dans ce module
     BrowserModule,
