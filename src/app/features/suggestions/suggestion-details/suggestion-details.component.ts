@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-suggestion-details',
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SuggestionDetailsComponent {
   id! : number;
   //une instance du service activatedRoute sera passé à ce composant sous le nom de "ac"
-  constructor(private ac:ActivatedRoute){
+  constructor(private ac:ActivatedRoute, private _router:Router){
       console.log("constructor");
   }
 

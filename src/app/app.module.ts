@@ -9,6 +9,8 @@ import { ListSuggegestionsComponent } from './features/suggestions/list-suggeges
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './core/home/home.component';
 import { NotfoundComponent } from './core/notfound/notfound.component';
+import { SuggestionService } from './core/Services/suggestion.service';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({ //décorateur
   declarations: [ //les composants liés à ce module
@@ -21,9 +23,9 @@ import { NotfoundComponent } from './core/notfound/notfound.component';
   imports: [ //la liste des modules qu'on a besoin dans ce module
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [], //service
+  providers: [provideHttpClient()], //service
   bootstrap: [AppComponent] //ne se trouve que dans le module racine : il indique le composant à appeler dans le fichier index.html
 })
 export class AppModule { }
