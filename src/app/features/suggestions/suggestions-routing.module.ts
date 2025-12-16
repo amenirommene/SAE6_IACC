@@ -9,6 +9,8 @@ const routes: Routes = [
   //SuggestionsComponent est considéré racine de SuggestionsModuke
   { path: '', component: SuggestionsComponent, children:[
       {path:'add', component:SuggestionFormComponent},
+      //localhost:4200/suggestions/update/1
+      {path:'update/:id', component:SuggestionFormComponent},
     //localhost:4200/suggestions
       {path:'listsuggestions', component:ListSuggegestionsComponent, children:[
         {path:'suggestion/:id', component:SuggestionDetailsComponent}

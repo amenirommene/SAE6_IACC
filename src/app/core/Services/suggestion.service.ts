@@ -63,9 +63,14 @@ nbLikes : 0
 getAllSuggestionsFromBackend():Observable<Suggestion[]>{
   return this._http.get<Suggestion[]>(this.suggestionUrl);
 }
-
+getAllSuggestionById(id:number):Observable<any>{
+  return this._http.get<any>(this.suggestionUrl+"/"+id);
+}
 addSuggestion(s:Suggestion):Observable<Suggestion>{
   return this._http.post<Suggestion>(this.suggestionUrl,s);
+}
+updateSuggestion(id:number,s:Suggestion):Observable<Suggestion>{
+  return this._http.put<Suggestion>(this.suggestionUrl+"/"+id,s);
 }
 
   getSuggestionsList(): Suggestion[] {
